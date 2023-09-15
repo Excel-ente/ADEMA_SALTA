@@ -28,7 +28,7 @@ class Producto(models.Model):
     precio = models.DecimalField(verbose_name="Pesos",default=0,max_digits=25, decimal_places=2)
     precio_usd = models.DecimalField(verbose_name="Dolares",default=0,max_digits=25, decimal_places=2)
     precio_bs = models.DecimalField(verbose_name="Bolivianos",default=0,max_digits=25, decimal_places=2)
-    en_stock = models.DecimalField(max_digits=25, decimal_places=2)
+    en_stock = models.DecimalField(max_digits=25, decimal_places=2,default=0)
     costo = models.DecimalField(max_digits=25, decimal_places=2,default=0 ,blank=True,null=True)
 
     categoria = models.ForeignKey(Categoria, on_delete=models.SET_NULL, null=True, blank=True)
