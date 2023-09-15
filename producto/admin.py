@@ -15,7 +15,7 @@ class ProductoAdmin(ImportExportModelAdmin):
     list_filter = ('categoria','nombre','descripcion')
     search_fields = ('nombre',)
     list_display_links = ('categoria','nombre',)
-    exclude = ('stock',)
+    exclude = ('en_stock',)
 
     def pesos(self, obj):
         return "💲{:,.2f}".format(obj.precio)    
